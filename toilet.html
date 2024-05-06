@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+        <title>Autism App</title>
+        <link rel="stylesheet" href="index.css">
+    </head>
+    <body>
+        <script type="text/javascript" src="js/Toilet.js"></script>
+        <script type="text/javascript" src="cordova.js"></script>
+    <div class="header">
+    	<div class="container">
+    		<div class="title">
+  				<h1>Task Structure Help</h1>
+  			</div>
+  			<div class="pagedesc">
+  				<h3>Using The Toilet In School</h3>
+  			</div>
+  		</div>
+	</div>
+
+	<div class="row">
+
+		<div class="menucontainer">
+
+			<div class="col-3 navmenu">
+			  <ul>
+			  	<li><a href="index.html">Home</a></li>
+			    <li><a href="morning.html">Morning</a></li>
+			    <li><a href="showering.html">Showering</a></li>
+			    <li><a href="brushteeth.html">Brush Teeth</a></li>
+			    <li><a href="playing.html">Playing With Others</a></li>
+			    <li><a href="toilet.html">Use Toilet In School</a></li>
+			    <li><a href="dog.html">Walking The Dog</a></li>
+			    <li><a href="bedtime.html">Bedtime</a></li>
+			  </ul>
+			</div>
+
+			<div id="mySidenav" class="sidenav">
+			<ul>
+				<li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="morning.html">Morning</a></li>
+			    <li><a href="showering.html">Showering</a></li>
+			    <li><a href="brushteeth.html">Brush Teeth</a></li>
+			    <li><a href="playing.html">Playing With Others</a></li>
+			    <li><a href="toilet.html">Use Toilet In School</a></li>
+			    <li><a href="dog.html">Walking The Dog</a></li>
+			    <li><a href="bedtime.html">Bedtime</a></li>
+			</ul>
+			</div>
+
+			<span class="sideNavSpan" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+
+		</div>
+
+		<div class="col-6 content">
+    		
+        
+    		<div class="navmenu">
+                <img src="Toilet1.jpg" alt="Picture Not Available" width="300" height="300"/>
+                <p> Step 1: Raise your hand (just leave class room if desperate)</p>
+		        <img src="Toilet2.jpeg" alt="Picture Not Available" width="300" height="300"/>
+		        <p> Step 2: Walk to toilet (run only when desperate)</p>
+		        <img src="Toilet3.jpeg" alt="Picture Not Available" width="300" height="300"/>
+		        <p> Step 3: Use the toilet </p>
+		        <img src="Toilet4.jpeg" alt="Picture Not Available" width="300" height="300"/>
+		        <p> Step 4: Return back to the classroom you came from </p>
+		    </div>
+			<!-- show next part only on mobile app -->
+			<div class="onlymobileShow"><tr>
+                <!-- where the image is -->
+    		    <img src="Toilet1.jpg" id="image" alt="Picture Not Available" width="300" height="300"/>
+        	    <!-- here is the text -->
+        	    <p id="nextText"> Step 1: Raise your hand (just leave class room if desperate)</p>
+			    <!-- these are the buttons -->
+			    <td><input id="backPic" type="image" src="Arrow%20Left.png" alt="Back" width="100" height="100"/></td>
+			    <td><input id="nextPic" type="image" src="Arrow%20Right.png" alt="Back" width="100" height="100"/></td>
+				</tr> </div>  
+			</div>
+
+	<div class="col-3 right">
+	  <div class="aside">
+	    <h2 style="margin-top: 0px;">The National Autistic Society Helpline</h2>
+	    <p>08088004104</p>
+	    <h2>Website</h2>
+	    <p>www.Autism.org.uk</p>
+	    <h2>About Autism</h2>
+	    <p style="margin-bottom: 0px;">Around 700,000 people in the UK are on the autism spectrum. Together with their families, this means autism is a part of daily life for 2.8 million people.</p>
+	    <p style="margin-top: 0px; margin-bottom: 0px;">You are not alone. </p>
+	    	<div class="NASlogo">
+	    	<img src="NASlogo.png" alt="NAS Logo" width="200" height="123">
+	    	</div>
+	  </div>
+	</div>
+
+	</div>
+
+	<div class="footer">
+	  <p>Created by Tom Jones st20102890 and Hui Yin Ting st20104639</p>
+	</div>
+
+
+	<script>
+	function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+	}
+
+	function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+	}
+	</script>
+
+    </body>
+</html>

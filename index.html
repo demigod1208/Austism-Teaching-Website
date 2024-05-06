@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no, width=device-width">
+    <title>Autism App</title>
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+<script type="text/javascript" src="cordova.js"></script>
+<div class="header">
+	<div class="container">
+    	<div class="title">
+  			<h1>Task Structure Help</h1>
+  		</div>
+  		<div class="pagedesc">
+  			<h3>Home Page</h3>
+  		</div>
+  	</div>
+</div>
+
+<div class="row">
+
+	<div class="menucontainer">
+
+		<div class="col-3 navmenu"> 
+            <!-- This gets hidden on mobile. sidenav is the nav menu for mobile -->
+			<ul>
+			  	<li><a href="Task Structure.html">Home</a></li>
+			    <li><a href="morning.html">Morning</a></li>
+			    <li><a href="showering.html">Showering</a></li>
+			    <li><a href="brushteeth.html">Brush Teeth</a></li>
+			    <li><a href="playing.html">Playing With Others</a></li>
+			    <li><a href="toilet.html">Use Toilet In School</a></li>
+			    <li><a href="dog.html">Walking The Dog</a></li>
+			    <li><a href="bedtime.html">Bedtime</a></li>
+			</ul>
+		</div>
+
+		<div id="mySidenav" class="sidenav">
+			<ul>
+				<li><a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a></li>
+				<li><a href="index.html">Home</a></li>
+				<li><a href="morning.html">Morning</a></li>
+			    <li><a href="showering.html">Showering</a></li>
+			    <li><a href="brushteeth.html">Brush Teeth</a></li>
+			    <li><a href="playing.html">Playing With Others</a></li>
+			    <li><a href="toilet.html">Use Toilet In School</a></li>
+			    <li><a href="dog.html">Walking The Dog</a></li>
+			    <li><a href="bedtime.html">Bedtime</a></li>
+			</ul>		
+		</div>
+
+		<div class="btnContainer">
+			<span class="sideNavSpan" style="font-size:30px;cursor:pointer" onclick="openNav()">&#9776; Menu</span>
+		</div>
+
+	<div class="col-6 content">
+	  <h1>Welcome</h1>
+	  <p>Our web app is designed to help children with autism to do some of the everyday thing they will encounter.
+        
+        We provide step by step information on to complete each task or provide information as a reminder, hope it will help.
+        </p>
+        <div class="menu">
+        	<p> To start choose the desired everyday task on the left side of the screen and lets get started! </p>
+        </div>
+        
+        <div class="onlymobileShow">
+        <p> To start press on the menu button it will show you the everyday tasks, choose the one you are currently doing and lets get started!</p></div>
+	</div>
+
+	<div class="col-3 right">
+	  <div class="aside">
+	    <h2 style="margin-top: 0px;">The National Autistic Society Helpline</h2>
+	    <p>08088004104</p>
+	    <h2>Website</h2>
+	    <p>www.Autism.org.uk</p>
+	    <h2>About Autism</h2>
+	    <p style="margin-bottom: 0px;">Around 700,000 people in the UK are on the autism spectrum. Together with their families, this means autism is a part of daily life for 2.8 million people.</p>
+	    <p style="margin-top: 0px; margin-bottom: 0px;">You are not alone. </p>
+	    	<div class="NASlogo">
+	    	<img src="NASlogo.png" alt="NAS Logo" width="200" height="123">
+	    	</div>
+	  </div>
+	</div>
+
+	</div>
+    </div>
+
+
+
+	<script>
+	function openNav() {
+    document.getElementById("mySidenav").style.width = "250px";
+	}
+
+	function closeNav() {
+    document.getElementById("mySidenav").style.width = "0";
+	}
+	</script>
+
+    </body>
+</html>

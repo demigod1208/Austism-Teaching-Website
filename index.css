@@ -1,0 +1,318 @@
+/* 
+When designing for a responsive layout I made the css for mobile first then did a media query for when the page is larger.
+Any css that is uniquely different for browser should go in the @media only screen and (min-width: 768px) {}
+Scroll down it should be clear what I mean.
+And any CSS for mobile should just go underneath this.
+
+david make sure it works for mobile first then worry about changing the CSS for browser.
+
+TODO: Add content. so images/instructions. For mobile find out how to swipe through images with javascript. 
+      For browser just display the images vertically and the user will scroll through them. 
+      You will probably have to make 2 seperate things for images. One for mobile and one for the browser.
+      In the browser CSS use display: none; to hide the div which contains the images for the mobile layout.
+      And then for the mobile CSS use display: none; to hide the div which contains the images for the broswer layout.
+
+      Add a homepage in the navigation menu
+      Add content to the homepage. just an introduction and how to use the app.
+
+      Was thinking of changing the font to an austitic friendly font. Just chose this current one cus it looked cool haha.
+*/
+
+
+
+* {
+    box-sizing: border-box;
+}
+
+body {
+	background-color: #60BB73;
+    font-family: shortstack;
+}
+
+@font-face{
+    font-family: "shortstack";
+    src: url('shortstack-regular-webfont') format('embedded-woff'),
+    url('shortstack-regular-webfont.woff') format('woff');
+}
+
+html, body { margin: 0; padding: 0; }
+
+.row::after {
+    content: "";
+    clear: both;
+    display: table;
+}
+
+[class*="col-"] {
+    float: left;
+    padding: 15px;
+}
+
+html {
+    font-family: "Lucida Sans", sans-serif;
+}
+
+/* Start of header CSS */
+.title {
+    background-color: #20619C;
+    color: #ffffff;
+    padding: 15px;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.pagedesc {
+    background-color: #2D74B4;
+    color: #ffffff;
+    padding: 1px;
+    text-align: center;
+    border-bottom-left-radius: 15px;
+    border-bottom-right-radius: 15px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+/* End of header CSS */
+
+
+/* Start of menu CSS */
+.navmenu {
+    display: none;
+}
+
+.navmenu ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+.navmenu li {
+    margin-bottom: 7px;
+    background-color: #2D74B4;
+    color: #ffffff;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    text-align: center;
+}
+.navmenu li:hover {
+    background-color: #0099cc;
+}
+
+
+/* Mobile menu CSS */
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #236BAC;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    border-top-right-radius: 30px;
+    border: 1px solid black;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #ffffff;
+    display: block;
+    transition: 0.3s;
+}
+
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.sidenav ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.sidenav li {
+  background-color: #2D74B4;
+  border-bottom: 1px solid black;
+}
+
+.sidenav li:hover {
+    background-color: #3D81BE;
+}
+
+
+a {display:block; padding: 15px;}
+a:link {color: #ffffff; text-decoration: none;}
+a:visited {color: #ffffff; text-decoration: none;}
+a:hover {color: #ffffff; text-decoration: none;}
+a:active {color: #ffffff; text-decoration: none;}
+
+/* End of menu CSS */
+
+/*Start of content CSS*/
+
+.content {
+    width: 30%;
+    background-color: #20619C;
+    color: #ffffff;
+    text-align: center;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+    border-radius: 15px;
+    margin-bottom: 15px;
+}
+
+.content p {
+    background-color: #2D74B4;
+    width: 85%;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/*End of content CSS*/
+
+/*Start of right side CSS */
+.aside {
+    background-color: #2D74B4;
+    padding: 15px 0px;
+    color: #ffffff;
+    text-align: center;
+    font-size: 14px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.aside p {
+    background-color: #20619C;
+    width: 85%;
+    padding-right: 5px;
+    padding-left: 5px;
+    padding-top: 10px;
+    padding-bottom: 10px;
+    margin-left: auto;
+    margin-right: auto;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+.NASlogo {
+    margin-top: 5px;
+}
+
+/* End of right side CSS */
+
+.footer {
+    background-color: #20619C;
+    color: #ffffff;
+    text-align: center;
+    font-size: 12px;
+    padding: 5px;
+    border-top-right-radius: 5px;
+    border-top-left-radius: 5px;
+    width: 100%;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.12), 0 1px 2px rgba(0,0,0,0.24);
+}
+
+/* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+}
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%;}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+
+    .header {
+       position: fixed;
+        width: 100%;
+    }
+
+    .title {
+    	text-align: left;
+        border-bottom-right-radius: 15px;
+        border-bottom-left-radius: 15px;
+    }
+
+    .pagedesc {
+        width: 30%;
+        display: block;
+        margin-left: auto;
+        margin-right: auto;
+    }
+
+    /* You need this so that the centent doesn't start off behind the header because it is position: fixed;*/
+    .row {
+        padding-top: 200px;
+    }
+
+    .sidenav {
+        display: none;
+    }
+
+
+    .sideNavSpan {
+        display: none;
+    }
+
+    .navmenu {
+        display: block;
+    }
+
+    .navmenu ul {
+        position: fixed;
+        width: 23%;
+        height: 100%;
+    }
+
+    .menu {
+        width: 50%;
+    }
+
+    .content {
+        width:50%;
+    }
+
+    .aside {
+        position: fixed;
+        width: 23%;
+        border-radius: 15px;
+    }
+
+    .mobileBtn {
+        display: none;
+    }
+
+    .footer {
+
+        bottom: 0px;
+        width: 100%;
+    }
+    
+     /* show and not show on mobile */ 
+    .onlymobileShow {display: none;} 
+    @media only screen 
+    and (min-device-width : 320px) 
+    and (max-device-width : 480px){ 
+    .mobileShow {display: inline;}
+    }
+    
+    
+    
+
+}
